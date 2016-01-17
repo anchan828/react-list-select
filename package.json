@@ -22,6 +22,8 @@
   "license": "ISC",
   "repository": "hawkrives/react-list-select",
   "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
     "babelify": "^5.0.3",
     "browser-sync": "^2.2.1",
     "browserify": "^9.0.3",
@@ -40,7 +42,7 @@
   "scripts": {
     "clean": "rm -f *.js example/*.js",
     "make-example": "browserify $npm_package_config_browserify -e example/index.es6 > example/bundle.js",
-    "build": "babel ./*.es6 --out-dir ./",
+    "build": "babel --presets react,es2015 ./*.es6 -d ./",
     "start": "npm run browser-sync & npm run watch; wait",
     "prepublish": "npm run build",
     "postpublish": "npm run clean",
