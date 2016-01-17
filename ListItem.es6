@@ -14,6 +14,7 @@ let ListItem = React.createClass({
 			'is-disabled': this.props.disabled,
 			'is-selected': this.props.selected,
 			'is-focused': this.props.focused,
+			'bg-info': this.props.selected
 		})
 
 		return <li className={classes}
